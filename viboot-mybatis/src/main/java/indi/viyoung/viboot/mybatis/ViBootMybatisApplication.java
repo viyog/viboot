@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date 2018/12/12 10:07 PM
  */
 @SpringBootApplication
-@MapperScan("indi.viyoung.viboot.indi.viyoung.viboot.mybatis.mapper")
+@MapperScan("indi.viyoung.viboot.mybatis.mapper")
 public class ViBootMybatisApplication {
     public static void main(String[] args) {
         SpringApplication.run(ViBootMybatisApplication.class, args);

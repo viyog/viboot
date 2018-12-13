@@ -12,7 +12,7 @@
         id, user_name, password
     </sql>
 
-    <select id="getAll" resultMap="BaseResultMap">
+    <select id="findAll" resultMap="BaseResultMap">
         SELECT
           <include refid="BaseColumnList" />
         FROM user

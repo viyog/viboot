@@ -6,6 +6,16 @@ import java.util.List;
 public interface BaseDao {
 
     /**
+     * 查找对象
+     *
+     * @param str
+     * @param obj
+     * @return
+     * @throws Exception
+     */
+    Object findForList(String str, Object obj);
+
+    /**
      * 保存对象
      *
      * @param str
@@ -13,7 +23,7 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public int insert(String str, Object obj);
+    int insert(String str, Object obj);
 
     /**
      * 批量保存对象
@@ -23,7 +33,7 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public int batchInsert(String str, List<?> objs);
+    int batchInsert(String str, List<?> objs);
 
     /**
      * 修改对象
@@ -33,7 +43,7 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public int update(String str, Object obj);
+    int update(String str, Object obj);
 
     /**
      * 批量修改对象
@@ -43,7 +53,7 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public void batchUpdate(String str, List<?> objs);
+    void batchUpdate(String str, List<?> objs);
 
     /**
      * 批量修改对象(通过sql的case/when拼接)
@@ -53,7 +63,7 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public int batchUpdateCaseWhen(String str, List<?> objs);
+    int batchUpdateCaseWhen(String str, List<?> objs);
 
     /**
      * 删除对象
@@ -63,7 +73,7 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public int delete(String str, Object obj);
+    int delete(String str, Object obj);
 
     /**
      * 批量删除对象
@@ -73,7 +83,7 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public int batchDelete(String str, List<?> objs);
+    int batchDelete(String str, List<?> objs);
 
     /**
      * 查找对象
@@ -83,7 +93,7 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public Object findForObject(String str, Object obj);
+    Object findForObject(String str, Object obj);
 
     /**
      * 查找对象
@@ -92,17 +102,8 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public Object findForObject(String str);
+    Object findForObject(String str);
 
-    /**
-     * 查找对象
-     *
-     * @param str
-     * @param obj
-     * @return
-     * @throws Exception
-     */
-    public Object findForList(String str, Object obj);
 
     /**
      * 查找对象封装成Map
@@ -112,6 +113,6 @@ public interface BaseDao {
      * @return
      * @throws Exception
      */
-    public Object findForMap(String sql, Object obj, String key, String value);
+    Object findForMap(String sql, Object obj, String key, String value);
 
 }

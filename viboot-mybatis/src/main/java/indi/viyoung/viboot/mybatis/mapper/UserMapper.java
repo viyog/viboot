@@ -5,8 +5,15 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
+/**
+ * @author yangwei
+ */
 public interface UserMapper {
 
+    /**
+     * 查询所有信息
+     * @return 人员列表
+     */
     @Select("SELECT * FROM user")
     @Results({
             @Result(property = "userName",  column = "user_name"),
