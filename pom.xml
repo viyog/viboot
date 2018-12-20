@@ -15,6 +15,7 @@
         <module>viboot-mybatis-plus</module>
         <module>viboot-mybatis-sqlsession</module>
         <module>viboot-mybatis-xml</module>
+        <module>viboot-exception-annotation</module>
     </modules>
 
     <parent>

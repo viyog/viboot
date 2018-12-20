@@ -1,0 +1,9 @@
+server:
+  port: 8086
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/viboot?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: Passw0rd
