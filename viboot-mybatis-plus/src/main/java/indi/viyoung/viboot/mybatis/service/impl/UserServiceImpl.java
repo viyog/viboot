@@ -24,9 +24,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     private UserMapper userMapper;
 
     @Override
-    public User findByUserName(String userName) {
+    public User findByUserName(String userName){
         QueryWrapper<User> wrapper = new QueryWrapper<>();
-//        wrapper.eq("user_name","lxt");
         wrapper.lambda().eq(User::getUserName,userName);
         return userMapper.selectOne(wrapper);
     }

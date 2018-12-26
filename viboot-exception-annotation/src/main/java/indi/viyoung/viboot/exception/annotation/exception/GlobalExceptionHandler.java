@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalExceptionHandler {
 
 
-
     @ExceptionHandler(Exception.class)
     public Object handlerException(Exception e) {
         String msg = e.getMessage();
