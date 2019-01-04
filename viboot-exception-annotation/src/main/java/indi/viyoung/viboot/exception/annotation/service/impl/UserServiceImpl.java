@@ -1,5 +1,6 @@
 package indi.viyoung.viboot.exception.annotation.service.impl;
 
+import indi.viyoung.viboot.exception.NullResponseException;
 import indi.viyoung.viboot.exception.annotation.dao.UserMapper;
 import indi.viyoung.viboot.exception.annotation.entity.UserDO;
 import indi.viyoung.viboot.exception.annotation.service.IUserService;
@@ -23,6 +24,16 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public List<UserDO> findAll() {
+        if (true) {
+            throw new NullResponseException();
+        }
         return userMapper.findAll();
     }
+
+    @Override
+    public List<UserDO> findAll1() {
+        return userMapper.findAll();
+    }
+
+
 }

@@ -1,5 +1,7 @@
 package indi.viyoung.viboot.aop;
 
+import indi.viyoung.viboot.handler.GlobalExceptionHandler;
+import indi.viyoung.viboot.util.CommonUrl;
 import indi.viyoung.viboot.util.ReadPropertiesUtil;
 import indi.viyoung.viboot.util.ReturnCode;
 import indi.viyoung.viboot.util.ReturnVO;
@@ -8,10 +10,10 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import java.util.Properties;
 
 /**
  * 统一封装返回值和异常处理
@@ -25,7 +27,8 @@ import java.util.Properties;
 @Component
 public class ResponseAop {
 
-    private static final Properties properties = ReadPropertiesUtil.getProperties(System.getProperty("user.dir") + "/viboot-common/src/main/resources/response.properties");
+    @Autowired
+    private GlobalExceptionHandler exceptionHandler;
 
     /**
      * 切点
@@ -48,17 +51,9 @@ public class ResponseAop {
                 returnVO.setData(proceed);
             }
         }  catch (Throwable throwable) {
-            returnVO = handlerException(throwable);
+            // 这里直接调用刚刚我们在handler中编写的方法
+            returnVO =  exceptionHandler.handlerException(throwable);
         }
-        return returnVO;
-    }
-
-    private ReturnVO handlerException(Throwable throwable) {
-        ReturnVO returnVO = new ReturnVO();
-        String errorName = throwable.toString();
-        errorName = errorName.substring(errorName.lastIndexOf(".") + 1);
-        returnVO.setMessage(properties.getProperty(ReturnCode.valueOf(errorName).msg()));
-        returnVO.setCode(properties.getProperty(ReturnCode.valueOf(errorName).val()));
         return returnVO;
     }
 }

@@ -1,4 +1,4 @@
-package indi.viyoung.viboot.exception.annotation.exception;
+package indi.viyoung.viboot.handler;
 
 import indi.viyoung.viboot.util.ReturnCode;
 import indi.viyoung.viboot.util.ReturnVO;

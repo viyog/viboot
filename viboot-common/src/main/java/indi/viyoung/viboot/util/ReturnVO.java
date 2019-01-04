@@ -10,7 +10,7 @@ import java.util.Properties;
  */
 public class ReturnVO {
 
-    private static final Properties properties = ReadPropertiesUtil.getProperties(System.getProperty("user.dir") + "/viboot-common/src/main/resources/response.properties");
+    private static Properties properties = ReadPropertiesUtil.getProperties(System.getProperty("user.dir") + CommonUrl.RESPONSE_PROP_URL);
 
     /**
      * 返回代码

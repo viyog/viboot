@@ -16,4 +16,6 @@ public interface IUserService {
      * @return
      */
     List<UserDO> findAll();
+
+    List<UserDO> findAll1();
 }

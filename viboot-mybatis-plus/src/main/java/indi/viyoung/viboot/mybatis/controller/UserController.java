@@ -1,12 +1,12 @@
 package indi.viyoung.viboot.mybatis.controller;
 
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import indi.viyoung.viboot.exception.NullResponseException;
 import indi.viyoung.viboot.mybatis.entity.User;
 import indi.viyoung.viboot.mybatis.service.UserService;
 import indi.viyoung.viboot.util.ReturnVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -41,8 +41,7 @@ public class UserController {
 
     @RequestMapping("/findAllByPage")
     public Object findAllByPage(){
-        Page<User> userIPage = new Page<>(1,10);
-        return userService.page(userIPage);
+        throw new RuntimeException("ddd");
     }
 
     @RequestMapping("/test")
@@ -50,4 +49,9 @@ public class UserController {
         throw new NullResponseException();
     }
 
+    @PostMapping("/post")
+    public Object post(User user) {
+        System.out.println(user);
+        return userService.list();
+    }
 }

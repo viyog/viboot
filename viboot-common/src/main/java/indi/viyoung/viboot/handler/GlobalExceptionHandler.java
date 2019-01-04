@@ -1,4 +1,4 @@
-package indi.viyoung.viboot.exception.annotation.exception;
+package indi.viyoung.viboot.handler;
 
 import indi.viyoung.viboot.util.CommonUrl;
 import indi.viyoung.viboot.util.ReadPropertiesUtil;
@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.util.Properties;
 
-import static indi.viyoung.viboot.util.ReturnCode.*;
+import static indi.viyoung.viboot.util.ReturnCode.valueOf;
 
 /**
  * 全局异常处理类
@@ -23,7 +23,9 @@ import static indi.viyoung.viboot.util.ReturnCode.*;
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
+
     private static Properties properties = ReadPropertiesUtil.getProperties(System.getProperty("user.dir") + CommonUrl.RESPONSE_PROP_URL);
+
 
     @Override
     protected ResponseEntity<Object> handleExceptionInternal(Exception ex, Object body, HttpHeaders headers, HttpStatus status, WebRequest request) {
@@ -36,7 +38,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
      * @return 封装的返回对象
      **/
     @ExceptionHandler(Exception.class)
-    public ReturnVO handlerException(Exception e) {
+    public ReturnVO handlerException(Throwable e) {
         ReturnVO returnVO = new ReturnVO();
         String errorName = e.getClass().getName();
         errorName = errorName.substring(errorName.lastIndexOf(".") + 1);

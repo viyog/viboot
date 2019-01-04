@@ -11,7 +11,6 @@ import org.springframework.context.annotation.ComponentScan;
  * @since 7:05 AM 2018/12/25
  **/
 @SpringBootApplication
-//@ComponentScan(value = "indi.viyoung.viboot.*")
 @MapperScan(value = "indi.viyoung.viboot.exception.annotation.dao")
 public class ViBootExceptionAnnotationApplication {
     public static void main(String[] args) {
