@@ -1,4 +1,4 @@
-package indi.viyoung.viboot.mybatis.entity;
+package indi.viyoung.viboot.restful.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

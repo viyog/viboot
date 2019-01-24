@@ -1,8 +1,8 @@
-package indi.viyoung.viboot.mybatis.service.impl;
+package indi.viyoung.viboot.restful.service.impl;
 
-import indi.viyoung.viboot.mybatis.entity.User;
-import indi.viyoung.viboot.mybatis.mapper.UserMapper;
-import indi.viyoung.viboot.mybatis.service.UserService;
+import indi.viyoung.viboot.restful.entity.User;
+import indi.viyoung.viboot.restful.mapper.UserMapper;
+import indi.viyoung.viboot.restful.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

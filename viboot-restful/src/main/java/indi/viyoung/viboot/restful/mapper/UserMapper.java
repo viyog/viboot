@@ -1,6 +1,6 @@
-package indi.viyoung.viboot.mybatis.mapper;
+package indi.viyoung.viboot.restful.mapper;
 
-import indi.viyoung.viboot.mybatis.entity.User;
+import indi.viyoung.viboot.restful.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

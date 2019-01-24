@@ -1,6 +1,6 @@
-package indi.viyoung.viboot.mybatis.mapper;
+package indi.viyoung.viboot.resteasy.mapper;
 
-import indi.viyoung.viboot.mybatis.entity.User;
+import indi.viyoung.viboot.resteasy.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author viyoung
- * @since 2019-01-23
+ * @since 2019-01-24
  */
 public interface UserMapper extends BaseMapper<User> {
 

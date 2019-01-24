@@ -22,6 +22,7 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
+
     @PostMapping(value = "/findAll")
     public Object findAll() {
         throw new RuntimeException("ddd");
@@ -30,7 +31,7 @@ public class UserController {
     @RequestMapping(value = "/findAll1")
     public ReturnVO findAll1(UserDO userDO) {
         System.out.println(userDO);
-        return new ReturnVO(userService.findAll1());
+        return new ReturnVO(userService.findAll());
     }
 
     @RequestMapping(value = "/test")

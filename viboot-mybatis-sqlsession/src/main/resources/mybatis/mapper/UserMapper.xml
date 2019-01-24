@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!--suppress ALL -->
 <mapper namespace="indi.viyoung.viboot.mybatis.mapper.UserMapper" >
-    <resultMap id="BaseResultMap" type="indi.viyoung.viboot.mybatis.entity.User" >
+    <resultMap id="BaseResultMap" type="indi.viyoung.viboot.mybatis.entity.UserDO" >
         <id column="id" property="id" jdbcType="BIGINT" />
         <result column="user_name" property="username" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
@@ -14,7 +14,7 @@
 
     <select id="findAll" resultMap="BaseResultMap">
         SELECT
-          <include refid="BaseColumnList" />
+          *
         FROM user
     </select>
 
@@ -26,7 +26,7 @@
         WHERE id = #{id}
     </select>
 
-    <insert id="insert" parameterType="indi.viyoung.viboot.mybatis.entity.User" >
+    <insert id="insert" parameterType="indi.viyoung.viboot.mybatis.entity.UserDO" >
        INSERT INTO
        		user
        		(user_name,password)
@@ -34,7 +34,7 @@
        		(#{username}, #{password})
     </insert>
 
-    <update id="update" parameterType="indi.viyoung.viboot.mybatis.entity.User" >
+    <update id="update" parameterType="indi.viyoung.viboot.mybatis.entity.UserDO" >
         UPDATE
             user
         SET

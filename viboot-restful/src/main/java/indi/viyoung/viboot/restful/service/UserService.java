@@ -1,6 +1,6 @@
-package indi.viyoung.viboot.mybatis.service;
+package indi.viyoung.viboot.restful.service;
 
-import indi.viyoung.viboot.mybatis.entity.User;
+import indi.viyoung.viboot.restful.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

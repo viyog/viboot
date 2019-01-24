@@ -17,6 +17,8 @@
         <module>viboot-mybatis-xml</module>
         <module>viboot-exception-annotation</module>
         <module>viboot-common</module>
+        <module>viboot-restful</module>
+        <module>viboot-resteasy</module>
     </modules>
 
     <parent>
