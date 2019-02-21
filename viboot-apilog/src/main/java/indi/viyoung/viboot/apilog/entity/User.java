@@ -1,4 +1,4 @@
-package indi.viyoung.viboot.resteasy.entity;
+package indi.viyoung.viboot.apilog.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author viyoung
- * @since 2019-01-24
+ * @since 2019-01-23
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

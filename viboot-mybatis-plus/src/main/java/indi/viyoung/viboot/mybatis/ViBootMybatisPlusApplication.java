@@ -29,14 +29,14 @@ public class ViBootMybatisPlusApplication {
         return new PaginationInterceptor();
     }
 
-//    @Bean
-//    public FilterRegistrationBean corsFilter() {
-//        FilterRegistrationBean reg = new FilterRegistrationBean();
-//        CORSFilter filter = new CORSFilter();
-//        reg.setFilter(filter);
-//        reg.setOrder(1);
-//        reg.addUrlPatterns("/user/*");
-//        return reg;
-//    }
+    @Bean
+    public FilterRegistrationBean corsFilter() {
+        FilterRegistrationBean reg = new FilterRegistrationBean();
+        CORSFilter filter = new CORSFilter();
+        reg.setFilter(filter);
+        reg.setOrder(1);
+        reg.addUrlPatterns("/*");
+        return reg;
+    }
 
 }

@@ -1,6 +1,6 @@
-package indi.viyoung.viboot.resteasy.service;
+package indi.viyoung.viboot.apilog.service;
 
-import indi.viyoung.viboot.resteasy.entity.User;
+import indi.viyoung.viboot.apilog.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author viyoung
- * @since 2019-01-24
+ * @since 2019-01-23
  */
 public interface UserService extends IService<User> {
 

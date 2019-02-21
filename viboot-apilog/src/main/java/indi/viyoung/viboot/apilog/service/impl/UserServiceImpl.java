@@ -1,8 +1,8 @@
-package indi.viyoung.viboot.resteasy.service.impl;
+package indi.viyoung.viboot.apilog.service.impl;
 
-import indi.viyoung.viboot.resteasy.entity.User;
-import indi.viyoung.viboot.resteasy.mapper.UserMapper;
-import indi.viyoung.viboot.resteasy.service.UserService;
+import indi.viyoung.viboot.apilog.entity.User;
+import indi.viyoung.viboot.apilog.mapper.UserMapper;
+import indi.viyoung.viboot.apilog.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author viyoung
- * @since 2019-01-24
+ * @since 2019-01-23
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {

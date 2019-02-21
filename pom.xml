@@ -18,7 +18,7 @@
         <module>viboot-exception-annotation</module>
         <module>viboot-common</module>
         <module>viboot-restful</module>
-        <module>viboot-resteasy</module>
+        <module>viboot-apilog</module>
     </modules>
 
     <parent>
