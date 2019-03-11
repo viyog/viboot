@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>viboot-apilog</artifactId>
-
+    <artifactId>viboot-swagger2</artifactId>
     <dependencies>
         <!--引入mybatis-plus-starter-->
         <dependency>
@@ -18,7 +17,6 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.0.6</version>
         </dependency>
-
         <!--velocity模板引擎-->
         <dependency>
             <groupId>org.apache.velocity</groupId>
@@ -32,19 +30,27 @@
             <artifactId>freemarker</artifactId>
             <version>2.3.28</version>
         </dependency>
+
+        <!--swagger start-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
         </dependency>
+
         <dependency>
-            <groupId>indi.viyoung.course</groupId>
-            <artifactId>viboot-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>2.9.2</version>
         </dependency>
-        <dependency>
-            <groupId>eu.bitwalker</groupId>
-            <artifactId>UserAgentUtils</artifactId>
-            <version>1.20</version>
-        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.github.xiaoymin</groupId>-->
+            <!--<artifactId>swagger-bootstrap-ui</artifactId>-->
+            <!--<version>1.9.0</version>-->
+        <!--</dependency>-->
+
+        <!--swagger end-->
     </dependencies>
+
 </project>

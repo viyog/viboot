@@ -49,9 +49,7 @@ public class ResponseAop {
         HttpServletRequest request = attributes.getRequest();
         System.out.println(request.getServerName());
         System.out.println(request.getServerPort());
-
         //记录请求的内容
-
         UserAgent userAgent = UserAgent.parseUserAgentString(request.getHeader("User-Agent"));
         log.info("接口路径：{}" , request.getRequestURL().toString());
         log.info("浏览器：{}", userAgent.getBrowser().toString());

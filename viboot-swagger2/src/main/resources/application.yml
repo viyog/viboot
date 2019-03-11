@@ -1,0 +1,10 @@
+server:
+  port: 8089
+
+logging:
+  level:
+    io.swagger.models.parameters.AbstractSerializableParameter: error
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用

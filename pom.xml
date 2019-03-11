@@ -19,6 +19,7 @@
         <module>viboot-common</module>
         <module>viboot-restful</module>
         <module>viboot-apilog</module>
+        <module>viboot-swagger2</module>
     </modules>
 
     <parent>

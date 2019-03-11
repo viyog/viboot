@@ -3,6 +3,7 @@ package indi.viyoung.viboot.apilog.controller;
 
 import indi.viyoung.viboot.apilog.entity.User;
 import indi.viyoung.viboot.apilog.service.UserService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/users")
+@Api
 public class UserController {
 
     @Resource
