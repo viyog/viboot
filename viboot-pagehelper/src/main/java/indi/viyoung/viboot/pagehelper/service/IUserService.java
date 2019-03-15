@@ -1,8 +1,10 @@
-package indi.viyoung.viboot.mybatis.service;
+package indi.viyoung.viboot.pagehelper.service;
 
-import indi.viyoung.viboot.mybatis.entity.UserDO;
+import indi.viyoung.viboot.pagehelper.entity.UserDO;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 用户事务接口
@@ -15,4 +17,6 @@ public interface IUserService {
      * @return
      */
     List<UserDO> findAll();
+
+    List<UserDO> findPage(HttpServletRequest request);
 }

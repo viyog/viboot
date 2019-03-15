@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+pagehelper:
+#  dialect: ①
+  helper-dialect: mysql # 分页插件会自动检测当前的数据库链接，自动选择合适的分页方式（可以不设置）
+  auto-dialect: true # 上面数据库设置后，下面的设置为true不会改变上面的结果（默认为true）
+  page-size-zero: false # ②
+  reasonable: true # ③
+  offset-as-page-num: false # 默认值为 false，该参数对使用 RowBounds 作为分页参数时有效。（一般用不着）
+  row-bounds-with-count: false # 默认值为 false，RowBounds是否进行count查询（一般用不着）
+  #params: ④
+  #support-methods-arguments: 和params配合使用，具体可以看下面的讲解
+  auto-runtime-dialect: false # 默认值为 false。设置为 true 时，允许在运行时根据多数据源自动识别对应方言的分页
+  close-conn: true # ⑤
+  default-count: true # 用于控制默认不带 count 查询的方法中，是否执行 count 查询
+  #dialect-alias: ⑥

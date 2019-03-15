@@ -1,9 +1,11 @@
-package indi.viyoung.viboot.mybatis.mapper;
+package indi.viyoung.viboot.pagehelper.mapper;
 
-import indi.viyoung.viboot.mybatis.entity.UserDO;
+import indi.viyoung.viboot.pagehelper.entity.UserDO;
 import org.apache.ibatis.annotations.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author yangwei
@@ -36,4 +38,11 @@ public interface UserMapper {
 
     @Delete("DELETE FROM user WHERE id =#{id}")
     void delete(Long id);
+
+    @Select("SELECT * FROM user")
+    @Results({
+            @Result(property = "userName",  column = "user_name"),
+            @Result(property = "password", column = "password")
+    })
+    List<UserDO> findPage(HttpServletRequest request);
 }

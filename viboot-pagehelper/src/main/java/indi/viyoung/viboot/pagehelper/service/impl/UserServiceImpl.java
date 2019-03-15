@@ -1,11 +1,13 @@
-package indi.viyoung.viboot.mybatis.service.impl;
+package indi.viyoung.viboot.pagehelper.service.impl;
 
-import indi.viyoung.viboot.mybatis.entity.UserDO;
-import indi.viyoung.viboot.mybatis.mapper.UserMapper;
-import indi.viyoung.viboot.mybatis.service.IUserService;
+
+import indi.viyoung.viboot.pagehelper.entity.UserDO;
+import indi.viyoung.viboot.pagehelper.mapper.UserMapper;
+import indi.viyoung.viboot.pagehelper.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -23,5 +25,10 @@ public class UserServiceImpl implements IUserService {
     @Override
     public List<UserDO> findAll() {
         return userMapper.findAll();
+    }
+
+    @Override
+    public List<UserDO> findPage(HttpServletRequest parameterMap) {
+        return userMapper.findPage(parameterMap);
     }
 }

@@ -1,4 +1,4 @@
-package indi.viyoung.viboot.mybatis.entity;
+package indi.viyoung.viboot.pagehelper.entity;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import lombok.Data;
  * @Date 2018/12/12 10:30 PM
  */
 @Data
-public class UserDO  {
+public class UserDO {
 
     private Long id;
 

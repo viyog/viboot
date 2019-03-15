@@ -13,11 +13,8 @@ import org.springframework.stereotype.Repository;
 
 
 /**
- * <pre>
- * 对象功能:BaseDao接口实现类
- * 开发人员:lixin
- * 创建时间:2018-01-15
- * </pre>
+ * @author vi
+ * @since 2019/03/01
  */
 @Repository("baseDao")
 public class BaseDaoImpl implements BaseDao {
