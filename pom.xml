@@ -20,8 +20,8 @@
         <module>viboot-restful</module>
         <module>viboot-apilog</module>
         <module>viboot-swagger2</module>
-        <module>viboot-beetl</module>
         <module>viboot-pagehelper</module>
+        <module>viboot-rds</module>
     </modules>
 
     <parent>
