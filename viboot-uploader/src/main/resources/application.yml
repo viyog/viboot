@@ -1,0 +1,21 @@
+server:
+  port: 18080
+  servlet:
+    context-path: /api
+
+#Save the problem of "The field file exceeds its maximum permitted size of 1048576 bytes."
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  redis:
+    host: 127.0.0.1  # IP
+    port: 6379  # 端口号
+    password: 123456  # 密码
+    lettuce:
+      pool:
+        max-active: 8 # 连接池最大连接数
+        max-wait: -1ms  # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        min-idle: 0 # 连接池中的最小空闲连接
+        max-idle: 8 # 连接池中的最大空闲连接

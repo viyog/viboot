@@ -22,6 +22,7 @@
         <module>viboot-swagger2</module>
         <module>viboot-pagehelper</module>
         <module>viboot-rds</module>
+        <module>viboot-uploader</module>
     </modules>
 
     <parent>

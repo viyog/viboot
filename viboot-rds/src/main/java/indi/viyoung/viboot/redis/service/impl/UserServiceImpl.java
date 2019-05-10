@@ -26,9 +26,6 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private UserMapper userMapper;
 
-    @Autowired
-    private RedisDao redisDao;
-
     @Override
 
     public List<UserDO> findAll() {
