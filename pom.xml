@@ -23,6 +23,7 @@
         <module>viboot-pagehelper</module>
         <module>viboot-rds</module>
         <module>viboot-uploader</module>
+        <module>viboot-es</module>
     </modules>
 
     <parent>
