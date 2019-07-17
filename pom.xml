@@ -24,6 +24,8 @@
         <module>viboot-rds</module>
         <module>viboot-uploader</module>
         <module>viboot-es</module>
+        <module>viboot-shiro</module>
+        <module>viboot-email</module>
     </modules>
 
     <parent>
